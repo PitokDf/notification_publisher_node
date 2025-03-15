@@ -96,6 +96,9 @@ EXCHANGE_NAME="notification"
 EXCHANGE_TYPE="fanout"
 NODE_ENV="development"
 ```
+
+- **sesuaikan `RABBITMQ_URL` dengan milik kalian**
+
 ## 5. Menjalankan Aplikasi
 
 ```sh
