@@ -81,7 +81,7 @@
 ## 3. Clone Aplikasi
 
 ```sh
-git clone https://github.com/kusnadi8605/notification_publisher
+git clone https://github.com/PitokDf/notification_publisher_node.git
 cd notification_publisher_node
 npm install
 ```
