@@ -12,7 +12,7 @@ export const publishNotification = async (req: Request, res: Response) => {
         const message = { order_id, user_id, content, timestamp }
 
         await rabbitmqService.publish(message)
-        console.log(`Message published: ${message}`);
+        console.log(`Message published:`, message);
         res.status(200).json({ success: true, message: "Message published successfully" })
     } catch (error: any) {
         res.status(500).json({ success: false, message: "Inernal server error", error: error.message })

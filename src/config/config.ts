@@ -1,6 +1,6 @@
 export const config = {
-    port: process.env.PORT || 8080,
-    rabbitmqUrl: process.env.RABBITMQ_URL || 'amqp://localhost',
-    exchangeName: process.env.EXCHANGE_NAME || 'notification',
-    exchangeType: process.env.EXCHANGE_TYPE || 'fanout'
+    port: 8080,
+    rabbitmqUrl: 'amqp://admin:admin12345@8.215.73.55:5672/',
+    exchangeName: 'notification',
+    exchangeType: 'fanout'
 }
