@@ -1,5 +1,5 @@
 import { Request, Response } from "express";
-import rabbitmqService from "../services/rabbitmqService.service";
+import rabbitmqService from "../services/rabbitmq.service";
 
 export const publishNotification = async (req: Request, res: Response) => {
     try {

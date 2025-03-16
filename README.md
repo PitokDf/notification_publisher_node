@@ -97,15 +97,15 @@ EXCHANGE_TYPE="fanout"
 NODE_ENV="development"
 ```
 
-- **sesuaikan `RABBITMQ_URL` dengan milik kalian**
+- **ganti `RABBITMQ_URL` dengan milik kalian**
 
-## 5. Menjalankan Aplikasi
+## 5. Menjalankan Aplikasi Publisher
 
 ```sh
 npm run dev
 ```
 
-## 6. Menguji Aplikasi
+## 6. Menguji Aplikasi Publisher
 
 Gunakan `curl` untuk mengirim pesan:
 ```sh
@@ -122,4 +122,24 @@ curl -X POST http://localhost:8080/publish \
 ### Respon yang diharapkan:
 ```json
 {"success":true,"message":"Message published successfully"}
+```
+
+## 7. Menjalankan Aplikasi Konsumer
+
+```sh
+npx ts-node consumer/smsConsumer.ts
+npx ts-node consumer/emailConsumer.ts
+npx ts-node consumer/fcmConsumer.ts
+```
+
+### Respon yang diharapkan:
+```sh
+   [EMAIL] Waiting for messages on queue: EMAIL
+   Received message in EMAIL:  {
+      order_id: '12345',
+      user_id: '67890',
+      content: 'New order received',
+      timestamp: '2025-03-11T10:00:00Z'
+   }
+   [EMAIL] sending for messages on queue: EMAIL
 ```

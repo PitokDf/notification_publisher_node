@@ -1,7 +1,7 @@
 import express from "express";
 import dotenv from "dotenv"
 import notificationRouter from "./routes/notificationRoutes.routes";
-import rabbitmqServiceService from "./services/rabbitmqService.service";
+import rabbitmqServiceService from "./services/rabbitmq.service";
 
 dotenv.config()
 
