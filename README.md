@@ -119,9 +119,10 @@ npx ts-node consumer/emailConsumer.ts
 npx ts-node consumer/fcmConsumer.ts
 ```
 
-### Respon yang diharapkan:
+## 7. Respon yang diharapkan saat ada yang publis message:
+
+### Email Consumer
 ```sh
-[EMAIL] Waiting for messages on queue: EMAIL
 Received message in EMAIL:  {
    order_id: '12345',
    user_id: '67890',
@@ -131,5 +132,26 @@ Received message in EMAIL:  {
 [EMAIL] sending for messages on queue: EMAIL
 ```
 
+### SMS Consumer
+```sh
+Received message in SMS:  {
+   order_id: '12345',
+   user_id: '67890',
+   content: 'New order received',
+   timestamp: '2025-03-11T10:00:00Z'
+}
+[SMS] sending for messages on queue: SMS
+```
+
+### FCM Consumer
+```sh
+Received message in FCM:  {
+   order_id: '12345',
+   user_id: '67890',
+   content: 'New order received',
+   timestamp: '2025-03-11T10:00:00Z'
+}
+[FCM] sending for messages on queue: FCM
+```
 ### Hasil Akhir
 ![Hasil Akhir](overview.png)
